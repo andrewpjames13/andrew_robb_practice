@@ -1,3 +1,9 @@
+<div class="page-header">
+  <h1>Companies
+  <%= link_to "Create", new_company_path, class: "btn btn-info pull-right" %>
+  </h1>
+</div>
+
 <table class="table table-striped">
   <thead>
     <th>Name</th>
@@ -16,6 +22,7 @@
       <td> <%= company.email %></td>
       <td> <%= company.start_date %></td>
       <td> <%= company.industry %></td>
+      <td> <%= link_to "Edit", edit_company_path(company), class: "btn btn-info" %>
       </tr>
       <% end %>
   </tbody>

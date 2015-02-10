@@ -1,0 +1,22 @@
+<table class="table table-striped">
+  <thead>
+    <th>Name</th>
+    <th>Suffix</th>
+    <th>Catch Phrase</th>
+    <th>Email</th>
+    <th>Start Date</th>
+    <th>Industry</th>
+  </thead>
+  <tbody>
+      <% @companies.each do |company| %>
+      <tr>
+      <td> <%= company.name %></td>
+      <td> <%= company.suffix %></td>
+      <td> <%= company.catch_phrase %></td>
+      <td> <%= company.email %></td>
+      <td> <%= company.start_date %></td>
+      <td> <%= company.industry %></td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>

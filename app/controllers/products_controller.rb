@@ -36,6 +36,18 @@ class ProductsController < ApplicationController
     end
   end
 
+  def destroy
+    @product = Product.find(params[:id])
+    @company = Company.find(params[:company_id])
+    @product.destroy
+    if @product.destroy
+      redirect_to company_path(@company)
+    else
+      render :show
+    end
+  end
+
+
   private
 
   def product_params

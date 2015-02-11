@@ -122,7 +122,8 @@ Things to remember
 ###### Example Companies Index Page:
 - Root => 'companies#index'
 - Name links to Show page for that company.
-- Link to Create Product and Create Location. The name should link to a show page for that company.
+- Link to Create Product and Create Location.
+- The name should link to a show page for that company.
 - Link to delete a company.
 
 

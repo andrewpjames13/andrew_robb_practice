@@ -1,0 +1,38 @@
+<%= form_for ([@company, @product]) do |f| %>
+<div class="form-group">
+  <div class="field">
+    <%= f.label :department %>
+    <div class='form-controls'>
+      <%= f.text_field :department, :class => 'form-control' %>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="field">
+    <%= f.label :name %>
+    <div class='form-controls'>
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="field">
+    <%= f.label :price %>
+    <div class='form-controls'>
+      <%= f.text_field :price, :class => 'form-control' %>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-md-offset-2 col-md-4">
+    <% if @product.id == nil %>
+    <%= f.submit 'Create Product', class: 'btn btn-primary'%>
+    <% else %>
+    <%= f.submit 'Update Product', class: 'btn btn-primary'%>
+    <% end %>
+  </div>
+</div>
+<% end %>

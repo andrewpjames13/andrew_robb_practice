@@ -22,6 +22,7 @@
       <td> <%= company.email %></td>
       <td> <%= company.start_date %></td>
       <td> <%= company.industry %></td>
+      <td> <%= link_to "Create Product", new_company_product_path(company), class: "btn btn-info" %></td>
       <td> <%= link_to "Edit", edit_company_path(company), class: "btn btn-info" %></td>
       <td> <%= link_to "Delete", company_path(company), method: :delete, class: "btn btn-danger" %></td>
       </tr>

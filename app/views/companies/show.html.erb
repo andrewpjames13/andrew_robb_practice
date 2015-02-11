@@ -9,3 +9,23 @@
   <li>Start Date <%= @company.start_date %></li>
   <li>Industry <%= @company.industry %></li>
 </ul>
+
+<table class="table table-striped">
+  <thead>
+    <th>Department</th>
+    <th>Name</th>
+    <th>Price</th>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+    <tr>
+      <td> <%= product.department %></td>
+      <td> <%= product.name %></td>
+      <td> <%= product.price %></td>
+      <td> <%#= link_to "Create Product", new_company_product_path(company), class: "btn btn-info" %></td>
+      <td> <%#= link_to "Edit", edit_company_path(company), class: "btn btn-info" %></td>
+      <td> <%#= link_to "Delete", company_path(company), method: :delete, class: "btn btn-danger" %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

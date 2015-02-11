@@ -21,6 +21,21 @@ class ProductsController < ApplicationController
     @company = Company.find(params[:company_id])
   end
 
+  def edit
+    @product = Product.find(params[:id])
+    @company = Company.find(params[:company_id])
+  end
+
+  def update
+    @product = Product.find(params[:id])
+    @company = Company.find(params[:company_id])
+    if @product.update(product_params)
+      redirect_to company_path(@company)
+    else
+      render :edit
+    end
+  end
+
   private
 
   def product_params

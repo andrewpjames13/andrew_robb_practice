@@ -7,3 +7,5 @@
   <li>Name: <%= @product.name %></li>
   <li>Price: <%= @product.price %></li>
 </ul>
+<%= link_to "Edit", edit_company_product_path(@company, @product), class: "btn btn-info" %>
+<%#= link_to "Delete", company_path(company), method: :delete, class: "btn btn-danger" %>
